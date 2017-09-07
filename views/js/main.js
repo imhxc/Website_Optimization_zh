@@ -466,7 +466,7 @@ window.performance.mark("mark_start_generating"); // 收集timing数据
 
 // 这个for循环在页面加载时创建并插入了所有的披萨
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
+  var pizzasDiv = document.querySelector("#randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -501,7 +501,7 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    items[i].style.transform = items[i].basicLeft + 100 * phase + 'px';
   }
 
   // 再次使用User Timing API。这很值得学习
@@ -521,7 +521,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 40; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
@@ -533,3 +533,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePositions();
 });
+
+
