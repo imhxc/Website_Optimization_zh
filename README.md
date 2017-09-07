@@ -26,5 +26,7 @@
 - 增加对应的css、js压缩处理文件，并重新链接至已压缩文件
 - main.js文件修改`querySelector`为`getElementById`,`querySelectorAll`为`getElementsByClassName`
 - 优化pizza size 的个数 *main.js文件524行*
+- 着重优化main.js文件中的changePizzaSizes方法
+- 压缩图片
 
 
